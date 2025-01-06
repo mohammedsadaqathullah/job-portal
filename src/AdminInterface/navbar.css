@@ -1,0 +1,181 @@
+.navbody {
+    width: 1440px;
+    height: 214px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    box-shadow: rgba(198, 191, 191, 0.25) 0px 0px 14px 0px;
+    background-color: #FFFFFF;
+}
+
+.navulone {
+    width: 890px;
+    height: 80px;
+    display: flex;
+    gap: 21.14px;
+    justify-content: center;
+    list-style: none;
+    border: 1px solid #FCFCFC;
+    box-shadow: #7F7F7F26 0px 0px 20px 0px;
+    border-radius: 122px;
+    overflow: hidden;
+}
+
+.navulone li {
+    align-self: center;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(48, 48, 48, 1);
+
+}
+
+.logoicon {
+    padding-left: 11.14px;
+    width: 44px;
+    height: 44.68px;
+
+}
+
+.navuloneitems {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    gap: 11.14px;
+    width: 613px;
+    height: 48px;
+}
+
+.liItems {
+    transition: all 0.2s linear;
+    text-align: center;
+    width: 102px;
+    height: 25px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    text-wrap: nowrap;
+}
+
+.liItems:hover {
+    transform: translateX(5px);
+    box-shadow: #7F7F7F26 0px 0px 20px 0px;
+}
+
+.navulone li button {
+    border-radius: 12px;
+    width: 133px;
+    height: 48px;
+    border-radius: 30px;
+    color: #FFFFFF;
+    background: linear-gradient(to right, #A128FF, #6100AD);
+    border: none;
+    padding: 5px;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.createjobstext {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+}
+
+.createjobstext:hover {
+    transform: translateY(50px) skew(-5deg);
+
+}
+
+.navultwo {
+    width: 1440px;
+    color: #686868;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+
+.search,
+.location,
+.jobtype {
+    border: none;
+    padding-left: 10px;
+    border-right: 1px solid #EAEAEA;
+    margin-top: 20px;
+    width: 300px;
+    height: 48px;
+    padding-left: 20px;
+    color: rgba(104, 104, 104, 1);
+    font-family: 'Satoshi', sans-serif;
+}
+
+.location,
+.jobtype {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+    font-size: 16px;
+    background: #fff url('./downarrow.png') no-repeat right 20px center;
+    background-size: 10px 4px;
+    border-radius: 3px;
+
+}
+
+.rangebox {
+    text-align: center;
+    overflow: hidden;
+}
+
+.rangecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.salaryrangeheadline {
+    margin-bottom: 20px;
+    color: #222222;
+    font-weight: 600;
+    line-height: 21.6px;
+}
+
+.rangeone,
+.rangetwo {
+    position: relative;
+    appearance: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+.rangeone::-webkit-slider-thumb,
+.rangetwo::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 5px solid black;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.rangeone::before,
+.rangetwo::before {
+    content: "";
+    top: 6px;
+    width: 500px;
+    height: 2px;
+    background-color: #686868;
+    position: absolute;
+    z-index: -1;
+}

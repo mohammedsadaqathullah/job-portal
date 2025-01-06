@@ -1,0 +1,220 @@
+#ShowBox {
+    display: block;
+}
+
+#NotShowBox {
+    display: none;
+}
+
+.JobAddingContainer {
+    width: 848px;
+    height: 779px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 5px 0px rgba(169, 169, 169, 0.25);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 0px 500px rgba(218, 220, 221, 0.75);
+    -webkit-box-shadow: 1px 1px 0px 500px rgba(218, 220, 221, 0.75);
+    -moz-box-shadow: 1px 1px 0px 00px rgba(218, 220, 221, 0.75);
+}
+
+.jobAddingInnerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.JobAddingHeading {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(34, 34, 34, 1);
+    text-align: center;
+    padding-top: 30px;
+}
+
+.closeSymbol {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.closeSymbol:hover {
+    font-size: 22px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.lineOne {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.lineTwo,
+.lineThree,
+.lineFour {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 20px;
+}
+
+.inputBoxCont {
+    width: 376px;
+    height: 91px;
+}
+
+.title {
+    width: 376px;
+    height: 27px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(99, 99, 99, 1);
+}
+
+.inputBox {
+    width: 376px;
+    height: 58px;
+    border-radius: 10px;
+    border: 1px solid rgba(188, 188, 188, 1);
+    padding-left: 10px;
+}
+
+.inputBox::placeholder {
+    padding: 5px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(188, 188, 188, 1);
+}
+
+.lineTwo select {
+    color: black;
+}
+
+.lineTwo .option2 {
+    color: black;
+}
+
+.dropDownInputBox {
+    width: 388px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid rgba(188, 188, 188, 1);
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(188, 188, 188, 1);
+    padding-left: 10px;
+}
+
+.salaryInput {
+    width: 376px;
+    height: 91px;
+    display: flex;
+    gap: 10px;
+}
+
+.salaryInput input::-webkit-outer-spin-button,
+.salaryInput input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.salaryInput input {
+    width: 183px;
+    height: 58px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 1px solid rgba(188, 188, 188, 1);
+}
+
+.application input {
+    width: 376px;
+    height: 58px;
+    border-radius: 10px;
+    border: 1px solid rgba(188, 188, 188, 1);
+    padding-left: 10px;
+}
+
+
+.dateShow {
+    color: transparent;
+}
+
+.dateNotShow {
+    color: black;
+}
+
+.lineFour {
+    padding-left: 20px;
+}
+
+.lineFour textarea {
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 768px;
+    height: 169px;
+    border-radius: 10px;
+    border: 1px 0px 0px 0px;
+}
+
+.lineFive {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 20px;
+}
+
+.draftbtnContainer {
+    width: 232px;
+    height: 59px;
+    border: 1.5px solid rgba(34, 34, 34, 1);
+    border-radius: 10px;
+}
+
+.draftbtn {
+    width: 232px;
+    height: 59px;
+    padding: 16px 60px 16px 60px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(34, 34, 34, 1);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.publishbtnContainer {
+    width: 207px;
+    height: 59px;
+    border-radius: 10px;
+    background-color: rgba(0, 170, 255, 1);
+}
+
+.publishbtn {
+    text-wrap: nowrap;
+    width: 207px;
+    height: 59px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Satoshi', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 60px 16px 60px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 170, 255, 1);
+}
