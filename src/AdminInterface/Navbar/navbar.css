@@ -208,7 +208,7 @@
 
 .rangebox {
     text-align: center;
-    overflow: hidden;
+
 }
 
 .rangecontainer {
@@ -224,15 +224,16 @@
     line-height: 21.6px;
 }
 
-.rangeone,
+/* .rangeone,
 .rangetwo {
     position: relative;
     appearance: none;
     border: none;
-    background: transparent;
+
     cursor: pointer;
     z-index: 2;
 }
+
 
 
 
@@ -256,4 +257,9 @@
     background-color: #686868;
     position: absolute;
     z-index: -1;
+} */
+
+.MuiSlider-thumb.Mui-focusVisible,
+.MuiSlider-thumb:hover {
+    box-shadow: none !important;
 }

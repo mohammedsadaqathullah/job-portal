@@ -7,7 +7,7 @@ export const DataProvider = ({ children }) => {
     //Navbar
     const [minRange, setMinRange] = useState(25);
     const [maxRange, setMaxRange] = useState(50);
-
+    const [value, setValue] = useState([50, 80]); // Initial values for the range
 
     //JobCards
     const [datas, setDatas] = useState([]);
@@ -137,6 +137,11 @@ export const DataProvider = ({ children }) => {
             alert('Failed to delete job. Please try again.');
         }
     };
+    // Handler to update the range values
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
 
 
     return (
@@ -152,11 +157,10 @@ export const DataProvider = ({ children }) => {
 
             //Navabar
             minRange, maxRange, setMinRange, setMaxRange,
-
+            handleChange, value,
 
             //JobCards 
             datas, handleDelete
-
 
         })}>
             {children}

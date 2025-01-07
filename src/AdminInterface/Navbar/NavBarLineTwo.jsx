@@ -2,11 +2,14 @@ import { useContext } from "react"
 import searchicon from '../Images/search.png'
 import locationicon from '../Images/location.png'
 import jobtypeicon from '../Images/jobtype.png'
+
 import DataContext from "../DataContext"
+import RangeSlider from "./RangeSlider"
 
 
 function NavBarLineTwo() {
-    const { minRange, maxRange, setMinRange, setMaxRange } = useContext(DataContext)
+    // const { minRange, maxRange, setMinRange, setMaxRange } = useContext(DataContext)
+    const { value } = useContext(DataContext)
 
     return (
         <>
@@ -75,11 +78,12 @@ function NavBarLineTwo() {
                                     Salary Per Month
                                 </span>
                                 <span>
-                                    {minRange}K - {maxRange}K</span></p>
+                                    {value[0]}K - {value[1]}K</span></p>
                         </span>
                         <span>
 
-                            <input
+                            <RangeSlider />
+                            {/* <input
                                 type="range"
                                 min={10}
                                 max={45}
@@ -94,7 +98,7 @@ function NavBarLineTwo() {
                                 step={5}
                                 value={maxRange}
                                 onChange={(e) => setMaxRange(e.target.value)}
-                                className="rangetwo" />
+                                className="rangetwo" /> */}
 
                         </span>
                     </span>
