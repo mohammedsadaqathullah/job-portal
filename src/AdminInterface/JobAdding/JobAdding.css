@@ -19,6 +19,13 @@
     box-shadow: 1px 1px 0px 500px rgba(218, 220, 221, 0.75);
     -webkit-box-shadow: 1px 1px 0px 500px rgba(218, 220, 221, 0.75);
     -moz-box-shadow: 1px 1px 0px 00px rgba(218, 220, 221, 0.75);
+    z-index: 5;
+}
+
+@media screen and (max-width: 700px) {
+    .JobAddingContainer {
+        transform: scale(0.5);
+    }
 }
 
 .jobAddingInnerContainer {
