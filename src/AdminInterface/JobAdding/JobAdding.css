@@ -219,3 +219,51 @@
     cursor: pointer;
     background-color: rgba(0, 170, 255, 1);
 }
+
+@media screen and (max-width: 700px) {
+    .JobAddingContainer {
+        width: 300px;
+        height: fit-content;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .lineOne,
+    .lineTwo,
+    .lineThree,
+    .lineFour,
+    .lineFive {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+    }
+
+    .lineFive {
+        gap: 5px;
+        padding-bottom: 10px;
+    }
+
+    .inputBox,
+    .dropDownInputBox,
+    .application input,
+    .lineFour textarea {
+        width: 250px;
+    }
+
+    .closeSymbol {
+        top: 5px;
+        right: 2px;
+    }
+
+    .application {
+        padding-top: 10px
+    }
+
+    .salaryInput {
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+
+}
