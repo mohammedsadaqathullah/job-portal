@@ -6,7 +6,7 @@ function NavBarLineOne() {
     const { setJobAddingBox } = useContext(DataContext)
     return (
         <>
-            <li>
+            <li className="logoicon">
                 <img
                     src={logoicon}
                     alt="logo"

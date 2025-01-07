@@ -1,5 +1,5 @@
 .navbody {
-    max-width: 1440px;
+    width: 1440px;
     height: 214px;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
     border: 1px solid #FCFCFC;
     box-shadow: #7F7F7F26 0px 0px 20px 0px;
     border-radius: 122px;
-    overflow: hidden;
+
 }
 
 .navulone li {
@@ -46,6 +46,24 @@
     gap: 11.14px;
     width: 613px;
     height: 48px;
+}
+
+@media only screen and (max-width: 840px) {
+    .navuloneitems {
+        display: none;
+    }
+
+    .navulone {
+        justify-content: space-around;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .navulone {
+        justify-content: center;
+        gap: 100px;
+    }
 }
 
 .liItems {
@@ -94,12 +112,19 @@
     width: 1440px;
     color: #686868;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     list-style: none;
     margin-top: -20px;
     margin-bottom: 20px;
 }
 
+@media only screen and (max-width: 900px) {
+    .navultwo {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
 
 .search,
 .location,
@@ -113,6 +138,21 @@
     padding-left: 20px;
     color: rgba(104, 104, 104, 1);
     font-family: 'Satoshi', sans-serif;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .search,
+    .location,
+    .jobtype {
+        display: none;
+    }
+
+    .searchicon,
+    .locationicon,
+    .jobtypeicon {
+        display: none;
+    }
 }
 
 .location,
