@@ -1,7 +1,7 @@
 
-import JobCards from './AdminInterface/Jobcards'
-import JobAdding from './AdminInterface/JobAdding'
-import Navbar from './AdminInterface/Navbar'
+import JobCards from './AdminInterface/JobCards/JobCards'
+import JobAdding from './AdminInterface/JobAdding/JobAdding'
+import Navbar from './AdminInterface/Navbar/Navbar'
 import './App.css'
 import { DataProvider } from './AdminInterface/DataContext'
 
