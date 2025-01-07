@@ -4,6 +4,7 @@ import locationicon from '../Images/location.png'
 import jobtypeicon from '../Images/jobtype.png'
 import DataContext from "../DataContext"
 
+
 function NavBarLineTwo() {
     const { minRange, maxRange, setMinRange, setMaxRange } = useContext(DataContext)
 
@@ -37,6 +38,7 @@ function NavBarLineTwo() {
                     <select
                         name="Preferred Location"
                         className="location">
+
                         <option value="*">
                             Preferred Location
                         </option>

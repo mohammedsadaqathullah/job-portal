@@ -200,7 +200,7 @@
     -moz-appearance: none;
     padding-right: 30px;
     font-size: 16px;
-    background: #fff url('./downarrow.png') no-repeat right 20px center;
+    background: #fff url('../Images/downarrow.png') no-repeat right 20px center;
     background-size: 10px 4px;
     border-radius: 3px;
 
