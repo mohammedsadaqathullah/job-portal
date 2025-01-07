@@ -59,12 +59,6 @@
 
 }
 
-@media only screen and (max-width: 700px) {
-    .navulone {
-        justify-content: center;
-        gap: 100px;
-    }
-}
 
 .liItems {
     transition: all 0.2s linear;
@@ -124,6 +118,50 @@
         justify-content: center;
     }
 
+}
+
+@media only screen and (max-width: 700px) {
+    .navbody {
+        width: 700px;
+    }
+
+    .navulone {
+        justify-content: center;
+        gap: 100px;
+        width: 700px;
+    }
+
+    .navultwo {
+        justify-content: center;
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .navbody,
+    .navulone,
+    .navultwo {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .navbody,
+    .navulone,
+    .navultwo {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .navbody,
+    .navulone,
+    .navultwo {
+        width: 400px;
+    }
 }
 
 .search,
