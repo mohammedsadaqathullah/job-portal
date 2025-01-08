@@ -8,6 +8,7 @@
     align-items: center;
     box-shadow: rgba(198, 191, 191, 0.25) 0px 0px 14px 0px;
     background-color: #FFFFFF;
+    font-family: 'Satoshi' !important;
 }
 
 .navulone {
@@ -20,12 +21,13 @@
     border: 1px solid #FCFCFC;
     box-shadow: #7F7F7F26 0px 0px 20px 0px;
     border-radius: 122px;
+    margin-top: 15px;
 
 }
 
 .navulone li {
     align-self: center;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
     font-weight: 600;
     font-size: 16px;
     color: rgba(48, 48, 48, 1);
@@ -86,7 +88,7 @@
     background: linear-gradient(to right, #A128FF, #6100AD);
     border: none;
     padding: 5px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
@@ -175,8 +177,9 @@
     height: 48px;
     padding-left: 20px;
     color: rgba(104, 104, 104, 1);
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
 }
+
 
 @media only screen and (max-width: 900px) {
 
@@ -208,6 +211,9 @@
 
 .rangebox {
     text-align: center;
+    width: 248px;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -218,10 +224,13 @@
 }
 
 .salaryrangeheadline {
+    width: 248px;
     margin-bottom: 20px;
     color: #222222;
     font-weight: 600;
     line-height: 21.6px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* .rangeone,

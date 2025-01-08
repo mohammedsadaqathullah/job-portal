@@ -13,7 +13,7 @@ export default function RangeSlider() {
     return (
         <>
 
-            <Box sx={{ width: 200 }}>
+            <Box sx={{ width: 248 }}>
                 <Slider
                     value={value} // Current range values
                     onChange={handleChange} // Event handler for slider change
@@ -21,8 +21,9 @@ export default function RangeSlider() {
                     getAriaLabel={() => 'range'} // Accessible label for the slider
                     getAriaValueText={valuetext} // Format value label text
                     min={50} // Minimum value of the range
-                    max={120} // Maximum value of the range
+                    max={100} // Maximum value of the range
                     step={5}
+                    size="small"
                     sx={(t) => ({
                         color: "black",
                         '& .MuiSlider-thumb': {

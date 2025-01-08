@@ -14,7 +14,7 @@ function NavBarLineTwo() {
     return (
         <>
             <li>
-                <label>
+                <label className="searchContainer">
                     <span>
 
                         <img

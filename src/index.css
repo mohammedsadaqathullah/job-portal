@@ -4,13 +4,10 @@
 }
 
 body {
-    width: 100%;
     background-color: #FBFBFF;
-    width: 100%;
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
-
+    font-family: 'Satoshi' !important;
 }
 
 body::-webkit-scrollbar {

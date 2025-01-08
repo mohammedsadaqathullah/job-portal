@@ -25,7 +25,8 @@ export const DataProvider = ({ children }) => {
     const [maxSalary, setMaxSalary] = useState('');
     const [deadline, setDeadline] = useState('');
     const [jobDescription, setJobDescription] = useState('');
-
+    const [openOne, setOpenOne] = useState(false);
+    const [openTwo, setOpenTwo] = useState(false);
 
     //JobCards
     async function handlingdatas() {
@@ -117,6 +118,28 @@ export const DataProvider = ({ children }) => {
             alert('Failed to add job. Please try again.');
         }
     };
+    //jobadding handling
+    const handleChangeOne = (event) => {
+        setJobType(event.target.value);
+    };
+
+    const handleChangeTwo = (event) => {
+        setLocation(event.target.value);
+    };
+
+    const handleCloseOne = () => {
+        setOpenOne(false);
+    };
+
+    const handleCloseTwo = () => {
+        setOpenTwo(false);
+    };
+    const handleOpenOne = () => {
+        setOpenOne(true);
+    };
+    const handleOpenTwo = () => {
+        setOpenTwo(true);
+    };
 
     //handledelete
     const handleDelete = async (id) => {
@@ -153,7 +176,9 @@ export const DataProvider = ({ children }) => {
             location, setLocation, jobType, setJobType,
             minSalary, setMinSalary, maxSalary, setMaxSalary,
             deadline, jobDescription, setJobDescription,
-            handleSubmit,
+            handleSubmit, handleChangeOne, handleChangeTwo,
+            handleCloseOne, handleCloseTwo, handleOpenOne, handleOpenTwo, openOne,
+            openTwo,
 
             //Navabar
             minRange, maxRange, setMinRange, setMaxRange,

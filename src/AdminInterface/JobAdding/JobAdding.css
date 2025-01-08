@@ -26,10 +26,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    justify-content: center;
+    font-family: 'Satoshi' !important;
 }
 
 .JobAddingHeading {
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
     font-size: 24px;
     font-weight: 700;
     color: rgba(34, 34, 34, 1);
@@ -59,15 +61,29 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+
 }
 
-.lineTwo,
+.lineTwo {
+    width: 376px;
+    height: 91px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-left: 24px;
+    gap: 48px;
+    padding-top: 20px;
+
+}
+
 .lineThree,
 .lineFour {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     padding-top: 20px;
+
+
 }
 
 .inputBoxCont {
@@ -78,7 +94,7 @@
 .title {
     width: 376px;
     height: 27px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
     font-size: 20px;
     font-weight: 600;
     color: rgba(99, 99, 99, 1);
@@ -94,37 +110,46 @@
 
 .inputBox::placeholder {
     padding: 5px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
     font-size: 16px;
     font-weight: 500;
     color: rgba(188, 188, 188, 1);
 }
 
-.lineTwo select {
-    color: black;
+
+.lineTwo .dropDownInputBox {
+    box-shadow: none;
 }
 
-.lineTwo .option2 {
-    color: black;
-}
 
 .dropDownInputBox {
     width: 388px;
     height: 60px;
     border-radius: 10px;
     border: 1px solid rgba(188, 188, 188, 1);
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
     font-size: 16px;
     font-weight: 500;
     color: rgba(188, 188, 188, 1);
     padding-left: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url('../Images/createjobdownarrow.png') no-repeat right 20px center;
+    background-size: 14px 7px;
+
+}
+
+.dropDownInputBox {
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 0px #93939340;
 }
 
 .salaryInput {
     width: 376px;
     height: 91px;
     display: flex;
-    gap: 10px;
+    gap: 40px;
 }
 
 .salaryInput input::-webkit-outer-spin-button,
@@ -134,7 +159,7 @@
 }
 
 
-.salaryInput input {
+.salaryInput input[type="number"] {
     width: 183px;
     height: 58px;
     border-radius: 10px;
@@ -142,13 +167,38 @@
     border: 1px solid rgba(188, 188, 188, 1);
 }
 
+.application {
+    margin-left: 9px;
+}
+
 .application input {
-    width: 376px;
+    width: 386px;
     height: 58px;
     border-radius: 10px;
     border: 1px solid rgba(188, 188, 188, 1);
-    padding-left: 10px;
+    position: relative;
+    cursor: pointer;
 }
+
+.application input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 19px;
+    height: 18px;
+    opacity: 0.1;
+    margin-right: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.application input[type="date"]::after {
+    position: absolute;
+    content: url('../Images/createjobcalender.png');
+    width: 16px;
+    height: 18px;
+    right: 13px;
+    top: 17px;
+    z-index: 1;
+}
+
 
 
 .dateShow {
@@ -160,7 +210,14 @@
 }
 
 .lineFour {
+    display: flex;
+    justify-content: center;
     padding-left: 20px;
+
+}
+
+.lineFour textarea::placeholder {
+    color: #BCBCBC;
 }
 
 .lineFour textarea {
@@ -170,6 +227,9 @@
     height: 169px;
     border-radius: 10px;
     border: 1px 0px 0px 0px;
+    font-family: 'Satoshi' !important;
+    font-size: medium;
+    color: #000000ee;
 }
 
 .lineFive {
@@ -177,6 +237,7 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     padding-top: 20px;
+
 }
 
 .draftbtnContainer {
@@ -190,7 +251,7 @@
     width: 232px;
     height: 59px;
     padding: 16px 60px 16px 60px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
     font-size: 20px;
     font-weight: 600;
     color: rgba(34, 34, 34, 1);
@@ -211,7 +272,7 @@
     height: 59px;
     border-radius: 10px;
     color: rgba(255, 255, 255, 1);
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi' !important;
     font-size: 20px;
     font-weight: 600;
     padding: 16px 60px 16px 60px;
