@@ -6,6 +6,8 @@
     display: none;
 }
 
+
+
 .JobAddingContainer {
     width: 848px;
     height: 779px;
@@ -281,28 +283,42 @@
     background-color: rgba(0, 170, 255, 1);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 839px) {
     .JobAddingContainer {
         width: 300px;
         height: fit-content;
         position: absolute;
-        top: 90%;
+        top: 20vh;
+        /* Instead of fixed margin-top, use a dynamic value */
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
+        /* Center horizontally */
     }
 
     .lineOne,
     .lineTwo,
-    .lineThree,
     .lineFour,
     .lineFive {
         grid-template-columns: 1fr;
         padding-left: 20px;
+        gap: 10px;
     }
 
     .lineFive {
         gap: 5px;
         padding-bottom: 10px;
+    }
+
+    .lineTwo {
+        margin-left: -5px !important;
+        width: 290px;
+        height: 200px;
+    }
+
+    .lineTwo .dropDownInputBox {
+        margin-top: 5px;
+        width: 265px;
+        height: 58px;
     }
 
     .inputBox,
@@ -317,14 +333,41 @@
         right: 2px;
     }
 
-    .application {
-        padding-top: 10px
-    }
-
     .salaryInput {
         flex-direction: column;
+        gap: 11px;
         padding-left: 10px;
+        height: 150px;
+        margin-top: 6px;
+        width: 200px;
     }
 
+    .salaryInputCont .title {
+        margin-left: 10px;
+    }
+
+    .salaryInputCont {
+        margin-top: 20px;
+
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    .lineThree {
+        width: 280px;
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+
+    .lineFour {
+        margin-right: 20px;
+    }
+
+    .publishbtnContainer {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
 }

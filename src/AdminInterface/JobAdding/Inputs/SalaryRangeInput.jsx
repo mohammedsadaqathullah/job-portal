@@ -4,7 +4,7 @@ import DataContext from '../../DataContext';
 const SalaryRangeInput = () => {
     const { minSalary, setMinSalary, maxSalary, setMaxSalary, } = useContext(DataContext)
     return (
-        <span>
+        <span className='salaryInputCont'>
             <p className='title'>Salary Range LPA</p>
             <span className="salaryInput">
                 <input type="number" placeholder="&darr;&uarr; &#8377;0"
