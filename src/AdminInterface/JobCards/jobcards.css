@@ -48,7 +48,7 @@
 
 .card {
     width: 316px;
-    height: 360px;
+    min-height: 360px;
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 14px 0px rgba(211, 211, 211, 0.15);
     position: relative;
@@ -57,8 +57,7 @@
     flex-direction: column;
     justify-content: space-around;
     overflow: hidden;
-    flex-wrap: wrap;
-    text-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .profile {
@@ -102,15 +101,27 @@
 .experience,
 .worklocation,
 .salaryLPA {
+    margin-top: 5px;
     text-wrap: nowrap;
 }
 
 .description {
     font-size: 14px;
     color: rgba(85, 85, 85, 1);
-    padding-left: 30px;
-    line-height: 18px;
-
+    padding: 10px 20px;
+    /* Adds balanced padding for alignment */
+    line-height: 1.6;
+    /* Increases line spacing for better readability */
+    overflow-wrap: break-word;
+    /* Breaks long words to wrap within the container */
+    word-wrap: break-word;
+    /* Ensures wrapping for compatibility */
+    white-space: normal;
+    /* Allows text to wrap within the container */
+    max-height: 200px;
+    /* Optional: Limits height to avoid excessive content */
+    overflow-y: auto;
+    /* Adds a scrollbar if content exceeds max-height */
 }
 
 .applybtn {

@@ -96,13 +96,15 @@
 
 .createjobstext {
     transition: all 0.5s ease-in-out;
-    position: absolute;
+    transform-style: preserve-3d;
+
 }
 
-/* .createjobstext:hover {
-    transform: translateY(50px) skew(-5deg);
+.createjobstext:hover {
+    box-shadow: #7F7F7F26 0px 10px 10px 5px;
+    transform: scale(1.1);
 
-} */
+}
 
 .navultwo {
     width: 1440px;

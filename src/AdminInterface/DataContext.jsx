@@ -74,7 +74,7 @@ export const DataProvider = ({ children }) => {
             workLocation: location,
             salaryLPA: `${minSalary}-${maxSalary} LPA`,
             descriptionOne: jobDescription,
-            descriptionTwo: "Some secondary description",
+            descriptionTwo: "Filter destinations based on interests and travel style, and create personalized",
             jobs: []
         };
 
