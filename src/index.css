@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../src/AdminInterface/fonts/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf') format('truetype');
+    font-display: swap;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +14,7 @@ body {
     background-color: #FBFBFF;
     display: flex;
     justify-content: center;
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
 }
 
 body::-webkit-scrollbar {

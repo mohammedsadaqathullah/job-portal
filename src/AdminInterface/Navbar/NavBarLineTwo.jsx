@@ -40,9 +40,10 @@ function NavBarLineTwo() {
                     </span>
                     <select
                         name="Preferred Location"
-                        className="location">
+                        className="location"
+                    >
 
-                        <option value="*">
+                        <option value="*" disabled selected>
                             Preferred Location
                         </option>
                     </select>
@@ -61,7 +62,7 @@ function NavBarLineTwo() {
                     <select
                         name="Job Type"
                         className="jobtype">
-                        <option value="*">
+                        <option value="*" disabled selected>
                             Job Type
                         </option>
 

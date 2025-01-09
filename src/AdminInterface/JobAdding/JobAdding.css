@@ -29,11 +29,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     justify-content: center;
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
 }
 
 .JobAddingHeading {
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: rgba(34, 34, 34, 1);
@@ -96,7 +96,7 @@
 .title {
     width: 376px;
     height: 27px;
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: 20px;
     font-weight: 600;
     color: rgba(99, 99, 99, 1);
@@ -112,7 +112,7 @@
 
 .inputBox::placeholder {
     padding: 5px;
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: rgba(188, 188, 188, 1);
@@ -129,7 +129,7 @@
     height: 60px;
     border-radius: 10px;
     border: 1px solid rgba(188, 188, 188, 1);
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: rgba(188, 188, 188, 1);
@@ -229,7 +229,7 @@
     height: 169px;
     border-radius: 10px;
     border: 1px 0px 0px 0px;
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: medium;
     color: #000000ee;
 }
@@ -253,7 +253,7 @@
     width: 232px;
     height: 59px;
     padding: 16px 60px 16px 60px;
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: 20px;
     font-weight: 600;
     color: rgba(34, 34, 34, 1);
@@ -274,7 +274,7 @@
     height: 59px;
     border-radius: 10px;
     color: rgba(255, 255, 255, 1);
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: 20px;
     font-weight: 600;
     padding: 16px 60px 16px 60px;

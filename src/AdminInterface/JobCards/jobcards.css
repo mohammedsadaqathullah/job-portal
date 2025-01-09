@@ -73,7 +73,7 @@
     right: 10px;
     bottom: 7px;
     color: rgba(0, 0, 0, 1);
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: 14px;
     text-align: center;
     padding: 5px;
@@ -82,7 +82,7 @@
 
 .jobRole {
     color: rgba(0, 0, 0, 1);
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     font-size: 20px;
     padding-left: 10px;
 
@@ -109,20 +109,14 @@
     font-size: 14px;
     color: rgba(85, 85, 85, 1);
     padding: 10px 20px;
-    /* Adds balanced padding for alignment */
     line-height: 1.6;
-    /* Increases line spacing for better readability */
     overflow-wrap: break-word;
-    /* Breaks long words to wrap within the container */
     word-wrap: break-word;
-    /* Ensures wrapping for compatibility */
     white-space: normal;
-    /* Allows text to wrap within the container */
     max-height: 200px;
-    /* Optional: Limits height to avoid excessive content */
     overflow-y: auto;
-    /* Adds a scrollbar if content exceeds max-height */
 }
+
 
 .applybtn {
 
@@ -133,7 +127,7 @@
     background-color: rgba(0, 170, 255, 1);
     box-shadow: 0px 0px 14px 0px rgba(93, 93, 93, 0.15);
     align-self: center;
-    font-family: 'Satoshi' !important;
+    font-family: 'Satoshi', sans-serif;
     color: rgba(255, 255, 255, 1);
     font-size: 16px;
     font-weight: 600;
