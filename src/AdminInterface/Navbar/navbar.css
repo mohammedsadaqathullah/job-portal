@@ -99,10 +99,10 @@
     position: absolute;
 }
 
-.createjobstext:hover {
+/* .createjobstext:hover {
     transform: translateY(50px) skew(-5deg);
 
-}
+} */
 
 .navultwo {
     width: 1440px;

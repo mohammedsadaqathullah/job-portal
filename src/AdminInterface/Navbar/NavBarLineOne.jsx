@@ -24,9 +24,9 @@ function NavBarLineOne() {
                     onClick={() => setJobAddingBox('ShowBox')}
                     className="createjobstext">
                     Create Jobs </button>
-                <button className="logintext">
+                {/* <button className="logintext">
                     Login
-                </button>
+                </button> */}
             </li>
         </>
 
