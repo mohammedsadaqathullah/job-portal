@@ -93,7 +93,7 @@ export const DataProvider = ({ children }) => {
         e.preventDefault();
         const jobData = {
             _id: randomIDs(),
-            profile: "https://i.postimg.cc/7ZbM1xz1/swiggy.jpg",
+            profile: "https://i.postimg.cc/bYL6v9ss/swiggylogo.png",
             jobRole: jobTitle,
             experience: "1-3 yr Exp",
             workLocation: location,
