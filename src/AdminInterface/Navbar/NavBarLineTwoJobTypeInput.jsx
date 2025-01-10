@@ -4,7 +4,7 @@ import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 import DataContext from '../DataContext';
 
 const NavBarLineTwoJobTypeInput = () => {
-    const { jobtypeOpen, handleJobTypeClose, handlejobTypeOpen, dummy2, setDummy2 } = useContext(DataContext);
+    const { jobtypeOpen, handleJobTypeClose, handlejobTypeOpen, dummyTwo, setDummyTwo } = useContext(DataContext);
 
     return (
         <FormControl
@@ -42,7 +42,7 @@ const NavBarLineTwoJobTypeInput = () => {
                         color: "rgba(104, 104, 104, 1)", // Ensure label color remains the same on focus
                     },
                 }}
-                shrink={dummy2 || false}
+
             >
                 Job type
             </InputLabel>
@@ -51,8 +51,8 @@ const NavBarLineTwoJobTypeInput = () => {
                 open={jobtypeOpen}
                 onClose={handleJobTypeClose}
                 onOpen={handlejobTypeOpen}
-                value={dummy2 || ''}
-                onChange={(e) => setDummy2(e.target.value)}
+                value={dummyTwo || ''}
+                onChange={(e) => setDummyTwo(e.target.value)}
                 IconComponent={() => <InputAdornment position="end"><ArrowDropDown sx={{ display: "none" }} /></InputAdornment>}
                 sx={{
                     fontSize: "16px",

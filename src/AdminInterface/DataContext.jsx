@@ -6,8 +6,8 @@ const DataContext = createContext({})
 
 export const DataProvider = ({ children }) => {
     //Navbar
-    const [dummy, setDummy] = useState()
-    const [dummy2, setDummy2] = useState()
+    const [dummy, setDummy] = useState('')
+    const [dummyTwo, setDummyTwo] = useState('')
     const [minRange, setMinRange] = useState(25);
     const [maxRange, setMaxRange] = useState(50);
     const [value, setValue] = useState([50, 80]); // Initial values for the range
@@ -205,7 +205,7 @@ export const DataProvider = ({ children }) => {
             minRange, maxRange, setMinRange, setMaxRange,
             handleChange, value, dummy, setDummy,
             locationOpen, handleLocationClose, handleLocationOpen,
-            jobTypeOpen, handleJobTypeClose, handleJobTypeOpen, dummy2, setDummy2,
+            jobTypeOpen, handleJobTypeClose, handleJobTypeOpen, dummyTwo, setDummyTwo,
 
             //JobCards 
             datas, handleDelete

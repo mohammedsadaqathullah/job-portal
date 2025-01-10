@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { styled } from '@mui/material/styles';
 import { FormControl, InputLabel, Select, MenuItem, InputAdornment } from '@mui/material';
 import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 import DataContext from '../DataContext';
@@ -43,7 +42,7 @@ const NavBarLineTwoLocationInput = () => {
                         color: "rgba(104, 104, 104, 1)", // Ensure label color remains the same on focus
                     },
                 }}
-                shrink={dummy || false}
+
             >
                 Preferred Location
             </InputLabel>
