@@ -97,7 +97,7 @@ export const DataProvider = ({ children }) => {
             jobRole: jobTitle,
             experience: "1-3 yr Exp",
             workLocation: location,
-            salaryLPA: `${averageSalary} LPA`,
+            salaryLPA: `${averageSalary}LPA`,
             descriptionOne: jobDescription,
             descriptionTwo: "Filter destinations based on interests and travel style, and create personalized",
             jobs: []
