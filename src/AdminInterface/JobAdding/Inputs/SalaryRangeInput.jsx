@@ -7,11 +7,11 @@ const SalaryRangeInput = () => {
         <span className='salaryInputCont'>
             <p className='title'>Salary Range LPA</p>
             <span className="salaryInput">
-                <input type="number" placeholder="&darr;&uarr; &#8377;0"
+                <input type="number" max={98} placeholder="&darr;&uarr; &#8377;0"
                     value={minSalary}
                     onChange={(e) => setMinSalary(e.target.value)}
                     required />
-                <input type="number" placeholder="&darr;&uarr; &#8377;12,00,000"
+                <input type="number" max={99} placeholder="&darr;&uarr; &#8377;12,00,000"
                     value={maxSalary}
                     onChange={(e) => setMaxSalary(e.target.value)}
                     required />

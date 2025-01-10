@@ -63,19 +63,21 @@
 
 
 .liItems {
-    transition: all 0.2s linear;
+
     text-align: center;
     width: 102px;
     height: 25px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
     border-radius: 10px;
     padding: 10px;
     text-wrap: nowrap;
+    transform-style: preserve-3d;
 }
 
 .liItems:hover {
-    transform: translateX(5px);
+    transform-style: preserve-3d;
+    transform: scale(1.05);
     box-shadow: #7F7F7F26 0px 0px 20px 0px;
 }
 
@@ -95,7 +97,7 @@
 }
 
 .createjobstext {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     transform-style: preserve-3d;
 
 }
@@ -184,6 +186,7 @@
     font-family: 'Satoshi', sans-serif;
 }
 
+
 .search,
 .location {
     font-size: 16px;
@@ -191,18 +194,13 @@
     font-family: 'Satoshi', sans-serif;
 }
 
-.location option,
-.jobtype option {
-    color: rgba(104, 104, 104, 1);
-    font-family: 'Satoshi', sans-serif;
-}
 
 
 @media only screen and (max-width: 900px) {
 
     .search,
-    .location,
-    .jobtype {
+    .navlocationcontainer,
+    .navjobtypecontainer {
         display: none;
     }
 
@@ -213,6 +211,14 @@
     }
 }
 
+.locationicon,
+.jobtypeicon {
+    margin-top: 35px;
+    padding: 0;
+
+}
+
+
 .location,
 .jobtype {
     appearance: none;
@@ -220,8 +226,8 @@
     -moz-appearance: none;
     padding-right: 30px;
     font-size: 16px;
-    background: #fff url('../Images/downarrow.png') no-repeat right 20px center;
-    background-size: 10px 4px;
+    background: #fff url('../Images/downarrow.svg') no-repeat right 40px center;
+
     border-radius: 3px;
 
 }

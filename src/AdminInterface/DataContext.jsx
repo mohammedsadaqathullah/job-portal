@@ -1,3 +1,4 @@
+
 import { createContext, useState, useEffect } from "react";
 import { useId } from 'react';
 
@@ -5,9 +6,13 @@ const DataContext = createContext({})
 
 export const DataProvider = ({ children }) => {
     //Navbar
+    const [dummy, setDummy] = useState()
+    const [dummy2, setDummy2] = useState()
     const [minRange, setMinRange] = useState(25);
     const [maxRange, setMaxRange] = useState(50);
     const [value, setValue] = useState([50, 80]); // Initial values for the range
+    const [locationOpen, setLocationOpen] = useState(false)
+    const [jobTypeOpen, setJobTypeOpen] = useState(false)
 
     //JobCards
     const [datas, setDatas] = useState([]);
@@ -27,6 +32,22 @@ export const DataProvider = ({ children }) => {
     const [jobDescription, setJobDescription] = useState('');
     const [openOne, setOpenOne] = useState(false);
     const [openTwo, setOpenTwo] = useState(false);
+
+    //Navbars
+    const handleLocationOpen = () => {
+        setLocationOpen(true);
+    };
+    const handleLocationClose = () => {
+        setLocationOpen(false);
+    };
+    const handleJobTypeOpen = () => {
+        setJobTypeOpen(true);
+    };
+    const handleJobTypeClose = () => {
+        setJobTypeOpen(false);
+    };
+
+
 
     //JobCards
     async function handlingdatas() {
@@ -182,7 +203,9 @@ export const DataProvider = ({ children }) => {
 
             //Navabar
             minRange, maxRange, setMinRange, setMaxRange,
-            handleChange, value,
+            handleChange, value, dummy, setDummy,
+            locationOpen, handleLocationClose, handleLocationOpen,
+            jobTypeOpen, handleJobTypeClose, handleJobTypeOpen, dummy2, setDummy2,
 
             //JobCards 
             datas, handleDelete

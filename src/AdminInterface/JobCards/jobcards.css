@@ -42,7 +42,7 @@
         grid-template-columns: 1fr;
         padding: 20 10px;
         justify-self: center;
-        margin-left: 40px;
+        margin-left: 30px;
     }
 }
 
@@ -58,6 +58,7 @@
     justify-content: space-around;
     overflow: hidden;
     margin-bottom: 20px;
+    padding-left: 10px;
 }
 
 .profile {
@@ -84,7 +85,7 @@
     color: rgba(0, 0, 0, 1);
     font-family: 'Satoshi', sans-serif;
     font-size: 20px;
-    padding-left: 10px;
+    padding-left: 15px;
 
 }
 
@@ -103,18 +104,31 @@
 .salaryLPA {
     margin-top: 5px;
     text-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    color: #5A5A5A;
+    font-family: Satoshi Variable;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
 }
 
 .description {
-    font-size: 14px;
-    color: rgba(85, 85, 85, 1);
+    font-family: 'Satoshi', sans-serif;
+    color: #555555;
     padding: 10px 20px;
-    line-height: 1.6;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    white-space: normal;
-    max-height: 200px;
-    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.9px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
 }
 
 

@@ -2,9 +2,10 @@ import { useContext } from "react"
 import searchicon from '../Images/search.png'
 import locationicon from '../Images/location.png'
 import jobtypeicon from '../Images/jobtype.png'
-
-import DataContext from "../DataContext"
 import RangeSlider from "./RangeSlider"
+import NavBarLineTwoLocationInput from "./NavBarLineTwoLocationInput"
+import DataContext from "../DataContext"
+import NavBarLineTwoJobTypeInput from "./NavBarLineTwoJobTypeInput"
 
 
 function NavBarLineTwo() {
@@ -30,7 +31,7 @@ function NavBarLineTwo() {
                 </label>
             </li >
             <label >
-                <li>
+                <li className="navlocationcontainer">
 
                     <span>
                         <img
@@ -38,35 +39,21 @@ function NavBarLineTwo() {
                             alt="location icon"
                             className="locationicon" />
                     </span>
-                    <select
-                        name="Preferred Location"
-                        className="location"
-                    >
+                    <span >
+                        <NavBarLineTwoLocationInput />
+                    </span>
 
-                        <option value="*" disabled selected>
-                            Preferred Location
-                        </option>
-                    </select>
                 </li>
             </label >
             <label >
-
-                <li>
+                <li className="navjobtypecontainer">
                     <span>
                         <img
                             src={jobtypeicon}
                             alt="jobtype icon"
                             className="jobtypeicon" />
                     </span>
-
-                    <select
-                        name="Job Type"
-                        className="jobtype">
-                        <option value="*" disabled selected>
-                            Job Type
-                        </option>
-
-                    </select>
+                    <NavBarLineTwoJobTypeInput />
                 </li>
             </label>
             <label >

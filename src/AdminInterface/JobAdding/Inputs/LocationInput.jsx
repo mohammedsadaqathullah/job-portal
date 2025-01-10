@@ -116,7 +116,7 @@ const LocationInput = () => {
                                 backgroundColor: "#F1F1F1",
                             },
                         }}>
-                        Coimbator
+                        Coimbatore
                     </MenuItem>
                     <MenuItem
                         value={"Bangalore"}

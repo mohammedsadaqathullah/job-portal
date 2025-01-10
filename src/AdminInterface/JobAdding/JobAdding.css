@@ -22,6 +22,7 @@
     -webkit-box-shadow: 1px 1px 0px 500px rgba(218, 220, 221, 0.75);
     -moz-box-shadow: 1px 1px 0px 00px rgba(218, 220, 221, 0.75);
     z-index: 5;
+    overflow: 'auto';
 }
 
 .jobAddingInnerContainer {
@@ -30,6 +31,7 @@
     justify-content: space-evenly;
     justify-content: center;
     font-family: 'Satoshi', sans-serif;
+
 }
 
 .JobAddingHeading {
@@ -48,14 +50,16 @@
     font-size: 20px;
     cursor: pointer;
     width: 50px;
+    height: 40px;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 50%;
     transition: all 0.2s ease-in-out;
 }
 
 .closeSymbol:hover {
     font-size: 22px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 }
 
 .lineOne {
@@ -100,6 +104,7 @@
     font-size: 20px;
     font-weight: 600;
     color: rgba(99, 99, 99, 1);
+    padding-bottom: 6px;
 }
 
 .inputBox {
@@ -137,7 +142,7 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: #fff url('../Images/createjobdownarrow.png') no-repeat right 20px center;
+    background: #fff url('../Images/createjobdownarrow.svg') no-repeat right 20px center;
     background-size: 14px 7px;
 
 }
@@ -174,12 +179,13 @@
 }
 
 .application input {
-    width: 386px;
+    width: 376px;
     height: 58px;
     border-radius: 10px;
     border: 1px solid rgba(188, 188, 188, 1);
     position: relative;
     cursor: pointer;
+    padding-left: 10px;
 }
 
 .application input[type="date"]::-webkit-calendar-picker-indicator {
@@ -238,7 +244,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    padding-top: 20px;
+    padding: 5px;
 
 }
 
@@ -281,6 +287,11 @@
     border: none;
     cursor: pointer;
     background-color: rgba(0, 170, 255, 1);
+}
+
+.publishbtn:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 839px) {

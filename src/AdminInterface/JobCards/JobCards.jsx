@@ -1,8 +1,9 @@
-import { useState, useEffect, useContext } from 'react';
-import experience from '../Images/experience.png';
-import workLocation from '../Images/workLocation.png';
-import salary from '../Images/salary.png';
+import { useContext } from 'react';
+
 import profile1 from '../Images/profile1.png';
+import ExperienceIcon from '../Images/experienceIcon';
+import WorkLocationIcon from '../Images/WorkLocationIcon';
+import SalaryIcon from '../Images/SalaryIcon';
 import DataContext from '../DataContext';
 import './jobcards.css';
 
@@ -24,13 +25,13 @@ function Jobcards() {
                     <h3 className='jobRole'>{data.jobRole}</h3>
                     <p className='secondRow'>
                         <span className='experience'>
-                            <img src={experience} alt="Experience" />{data.experience}
+                            <ExperienceIcon /> {data.experience}
                         </span>
                         <span className="worklocation">
-                            <img src={workLocation} alt="Location" /> {data.workLocation}
+                            <WorkLocationIcon /> {data.workLocation}
                         </span>
                         <span className='salaryLPA'>
-                            <img src={salary} alt="Salary" /> {data.salaryLPA}
+                            <SalaryIcon /> {data.salaryLPA}
                         </span>
                     </p>
                     <ul className='description'>
