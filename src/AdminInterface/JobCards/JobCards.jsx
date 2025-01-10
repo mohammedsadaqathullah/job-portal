@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
 import profile1 from '../Images/profile1.png';
-import ExperienceIcon from '../Images/experienceIcon';
+import ExperienceIcon from '../Images/ExperienceIcon';
 import WorkLocationIcon from '../Images/WorkLocationIcon';
 import SalaryIcon from '../Images/SalaryIcon';
 import DataContext from '../DataContext';
