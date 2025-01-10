@@ -86,6 +86,10 @@ export const DataProvider = ({ children }) => {
     }
 
     const handleSubmit = async (e) => {
+        let averageSalaryCalc = () => {
+            return (parseInt(minSalary) + parseInt(maxSalary)) / 2;
+        }
+        let averageSalary = averageSalaryCalc();
         e.preventDefault();
         const jobData = {
             _id: randomIDs(),
@@ -93,7 +97,7 @@ export const DataProvider = ({ children }) => {
             jobRole: jobTitle,
             experience: "1-3 yr Exp",
             workLocation: location,
-            salaryLPA: `${minSalary}-${maxSalary} LPA`,
+            salaryLPA: `${averageSalary} LPA`,
             descriptionOne: jobDescription,
             descriptionTwo: "Filter destinations based on interests and travel style, and create personalized",
             jobs: []
