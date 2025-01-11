@@ -194,6 +194,11 @@
     font-family: 'Satoshi', sans-serif;
 }
 
+.search {
+    outline: none;
+    padding-right: 10px;
+
+}
 
 
 @media only screen and (max-width: 900px) {
@@ -211,10 +216,11 @@
     }
 }
 
+.searchicon,
 .locationicon,
 .jobtypeicon {
     margin-top: 35px;
-    padding: 0;
+    margin-right: 10px;
 
 }
 

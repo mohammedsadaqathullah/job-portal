@@ -15,9 +15,7 @@ import JobDescriptionInput from './Inputs/JobDescriptionInput';
 import './JobAdding.css';
 
 function JobAdding() {
-    const { jobAddingBox,
-
-        handleSubmit }
+    const { jobAddingBox, handleSubmit, setJobAddingBox }
         = useContext(DataContext);
 
     return (
@@ -42,7 +40,9 @@ function JobAdding() {
                     </span>
                     <span className="lineFive">
                         <span className='draftbtnContainer'>
-                            <p className='draftbtn'>Save Draft <img src={draftbtn} /> </p>
+                            <p className='draftbtn'
+                                onClick={() => setJobAddingBox('NotShowBox')}>
+                                Save Draft <img src={draftbtn} /> </p>
                         </span>
                         <span className="publishbtnContainer">
                             <button className='publishbtn'

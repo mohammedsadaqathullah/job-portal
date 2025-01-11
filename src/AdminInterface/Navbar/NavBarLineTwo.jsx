@@ -1,11 +1,11 @@
 import { useContext } from "react"
-import searchicon from '../Images/search.png'
-import locationicon from '../Images/location.png'
-import jobtypeicon from '../Images/jobtype.png'
+import SearchIcon from "./SearchIcon"
+import LocationIcon from "./LocationIcon"
+import JobTypeIcon from "./JobTypeIcon"
 import RangeSlider from "./RangeSlider"
 import NavBarLineTwoLocationInput from "./NavBarLineTwoLocationInput"
-import DataContext from "../DataContext"
 import NavBarLineTwoJobTypeInput from "./NavBarLineTwoJobTypeInput"
+import DataContext from "../DataContext"
 
 
 function NavBarLineTwo() {
@@ -17,11 +17,7 @@ function NavBarLineTwo() {
             <li>
                 <label className="searchContainer">
                     <span>
-
-                        <img
-                            src={searchicon}
-                            alt="searchicon"
-                            className="searchicon" />
+                        <SearchIcon />
                     </span>
                     <input
                         type="search"
@@ -34,10 +30,7 @@ function NavBarLineTwo() {
                 <li className="navlocationcontainer">
 
                     <span>
-                        <img
-                            src={locationicon}
-                            alt="location icon"
-                            className="locationicon" />
+                        <LocationIcon />
                     </span>
                     <span >
                         <NavBarLineTwoLocationInput />
@@ -48,10 +41,7 @@ function NavBarLineTwo() {
             <label >
                 <li className="navjobtypecontainer">
                     <span>
-                        <img
-                            src={jobtypeicon}
-                            alt="jobtype icon"
-                            className="jobtypeicon" />
+                        <JobTypeIcon />
                     </span>
                     <NavBarLineTwoJobTypeInput />
                 </li>
