@@ -89,6 +89,7 @@
 .secondRow {
     width: 316px;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding-left: 5px;
     font-size: 16px;
@@ -128,15 +129,19 @@
 
 }
 
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    justify-content: space-around;
+}
 
-.applybtn {
+.deletebtn,
+.Editbtn {
 
-    width: 284px;
-    height: 46px;
+    width: 140px;
+    height: 40px;
     border-radius: 10px;
-    border: 1px solid rgba(0, 170, 255, 1);
-    background-color: rgba(0, 170, 255, 1);
-    box-shadow: 0px 0px 14px 0px rgba(93, 93, 93, 0.15);
     align-self: center;
     font-family: 'Satoshi', sans-serif;
     color: rgba(255, 255, 255, 1);
@@ -144,4 +149,23 @@
     font-weight: 600;
     line-height: 21.6px;
     text-align: center;
+    cursor: pointer;
+}
+
+.deletebtn:hover,
+.Editbtn:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+
+.deletebtn {
+    border: 1px solid rgb(236, 17, 28);
+    background-color: rgb(248, 14, 14);
+    box-shadow: 0px 0px 14px 0px rgba(93, 93, 93, 0.15);
+}
+
+.Editbtn {
+    border: 1px solid rgb(19, 111, 231);
+    background-color: rgb(19, 111, 231);
+    box-shadow: 0px 0px 14px 0px rgba(93, 93, 93, 0.15);
 }

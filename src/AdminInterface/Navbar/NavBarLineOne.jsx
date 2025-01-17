@@ -4,16 +4,21 @@ import DataContext from "../DataContext";
 
 function NavBarLineOne() {
     const { setJobAddingBox } = useContext(DataContext)
+    const handleRefresh = () => {
+        window.location.href = "/"; // Redirect to home and refresh the page
+    };
+
     return (
         <>
             <li className="logoicon">
                 <img
                     src={logoicon}
                     alt="logo"
-                    className="logoicon" />
+                    className="logoicon"
+                    onClick={handleRefresh} />
             </li>
             <span className="navuloneitems">
-                <li className="liItems">Home</li>
+                <li className="liItems" onClick={handleRefresh}>Home</li>
                 <li className="liItems">Find Jobs</li>
                 <li className="liItems">Find Talents</li>
                 <li className="liItems">About us</li>

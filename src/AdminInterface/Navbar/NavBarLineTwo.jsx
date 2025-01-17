@@ -10,7 +10,7 @@ import DataContext from "../DataContext"
 
 function NavBarLineTwo() {
     // const { minRange, maxRange, setMinRange, setMaxRange } = useContext(DataContext)
-    const { value } = useContext(DataContext)
+    const { value, searchFilter, setSearchFilter } = useContext(DataContext)
 
     return (
         <>
@@ -23,6 +23,8 @@ function NavBarLineTwo() {
                         type="search"
                         placeholder="Search By Job Title,Role"
                         className="search"
+                        value={searchFilter}
+                        onChange={(e) => setSearchFilter(e.target.value)}
                         required />
                 </label>
             </li >
@@ -53,10 +55,10 @@ function NavBarLineTwo() {
                         <span>
                             <p className="salaryrangeheadline">
                                 <span>
-                                    Salary Per Month
+                                    Salary LPA
                                 </span>
                                 <span>
-                                    {value[0]}K - {value[1]}K</span></p>
+                                    {value[0]} LPA - {value[1]} LPA</span></p>
                         </span>
                         <span>
 

@@ -1,5 +1,5 @@
 
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useMemo } from "react";
 import { useId } from 'react';
 
 const DataContext = createContext({})
@@ -10,14 +10,19 @@ export const DataProvider = ({ children }) => {
     const [dummyTwo, setDummyTwo] = useState('')
     const [minRange, setMinRange] = useState(25);
     const [maxRange, setMaxRange] = useState(50);
-    const [value, setValue] = useState([50, 80]); // Initial values for the range
+    const [value, setValue] = useState([2.5, 35]); // Initial values for the range
     const [locationOpen, setLocationOpen] = useState(false)
     const [jobTypeOpen, setJobTypeOpen] = useState(false)
+    const [searchFilter, setSearchFilter] = useState('')
+    const [locationFilter, setLocationFilter] = useState('')
 
     //JobCards
     const [datas, setDatas] = useState([]);
     const [loading, setLoading] = useState(true);
     const randomID = useId();
+    const [EditableDatas, setEditableDatas] = useState([])
+    const [editID, setEditID] = useState('')
+    const [trigger, setTrigger] = useState(false)
 
     //JobAdding
     const [dateClass, setDateClass] = useState('dateShow')
@@ -26,8 +31,7 @@ export const DataProvider = ({ children }) => {
     const [companyName, setCompanyName] = useState('');
     const [location, setLocation] = useState('');
     const [jobType, setJobType] = useState('');
-    const [minSalary, setMinSalary] = useState('');
-    const [maxSalary, setMaxSalary] = useState('');
+    const [salary, setSalary] = useState('');
     const [deadline, setDeadline] = useState('');
     const [jobDescription, setJobDescription] = useState('');
     const [openOne, setOpenOne] = useState(false);
@@ -47,6 +51,58 @@ export const DataProvider = ({ children }) => {
         setJobTypeOpen(false);
     };
 
+    useEffect(() => {
+        if (searchFilter) {
+            setDatas((prevDatas) =>
+                prevDatas.filter((item) =>
+                    item.jobRole.toLowerCase().includes(searchFilter.toLowerCase())
+                )
+            );
+        } else {
+            handlingdatas(); // Re-fetch or reset the data when searchFilter is empty
+        }
+    }, [searchFilter]);
+
+    useEffect(() => {
+        if (locationFilter) {
+            setDatas((prevDatas) =>
+                prevDatas.filter((item) =>
+                    item.workLocation.toLowerCase().includes(locationFilter.toLowerCase())
+                )
+            );
+        } else {
+            handlingdatas(); // Re-fetch or reset the data when searchFilter is empty
+        }
+    }, [locationFilter]);
+
+    useEffect(() => {
+        if (trigger && editID) {
+            setLoading(true)
+            const timertwo = setTimeout(() => {
+                handlingEditDatas({ id: editID });
+            }, 3000);
+
+            return () => clearTimeout(timertwo);
+        }
+    }, [trigger, editID]);  // Only trigger when `trigger` or `editID` changes
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            handlingdatas();
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return <div className="spinner"></div>;
+    }
+
+    // Handler to update the range values
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+
+    };
 
 
     //JobCards
@@ -62,16 +118,23 @@ export const DataProvider = ({ children }) => {
         }
     }
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            handlingdatas();
-        }, 3000);
 
-        return () => clearTimeout(timer);
-    }, []);
 
-    if (loading) {
-        return <div className="spinner"></div>;
+
+    async function handlingEditDatas({ id }) {
+        if (!id) return; // Ensure there's a valid ID before fetching
+
+        try {
+            const response = await fetch(`https://admin-interface-backend.onrender.com/users/${id}`);
+            const data = await response.json();
+            setEditableDatas(data);  // Store the fetched data in EditableDatas state
+
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        } finally {
+            setLoading(false);
+
+        }
     }
 
 
@@ -86,10 +149,7 @@ export const DataProvider = ({ children }) => {
     }
 
     const handleSubmit = async (e) => {
-        let averageSalaryCalc = () => {
-            return (parseInt(minSalary) + parseInt(maxSalary)) / 2;
-        }
-        let averageSalary = averageSalaryCalc();
+
         e.preventDefault();
         const jobData = {
             _id: randomIDs(),
@@ -97,7 +157,7 @@ export const DataProvider = ({ children }) => {
             jobRole: jobTitle,
             experience: "1-3 yr Exp",
             workLocation: location,
-            salaryLPA: `${averageSalary}LPA`,
+            salaryLPA: `${salary}LPA`,
             descriptionOne: jobDescription,
             descriptionTwo: "Filter destinations based on interests and travel style, and create personalized",
             jobs: []
@@ -130,8 +190,7 @@ export const DataProvider = ({ children }) => {
                 setCompanyName('');
                 setLocation('');
                 setJobType('');
-                setMinSalary('');
-                setMaxSalary('');
+                setSalary('');
                 setDeadline('');
                 setJobDescription('');
             }, 5000);
@@ -166,6 +225,40 @@ export const DataProvider = ({ children }) => {
         setOpenTwo(true);
     };
 
+
+    const handleUpdates = async (updatedData) => {
+
+        if (!editID) {
+            alert("No job selected for updating!");
+            return;
+        }
+
+        try {
+            console.log("Updating job with ID:", editID);
+
+            const response = await fetch(`https://admin-interface-backend.onrender.com/users/${editID}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(updatedData),
+            });
+
+            if (response.ok) {
+                const updatedJob = await response.json();
+                setDatas((prevDatas) =>
+                    prevDatas.map((job) => (job._id === editID ? updatedJob : job))
+                );
+                alert("Job updated successfully!");
+                window.location.href = '/';
+            } else {
+                const errorData = await response.json();
+                throw new Error(errorData.message || "Failed to update the job");
+            }
+        } catch (error) {
+            console.error("Error updating job:", error);
+            alert(`Error: ${error.message}`);
+        }
+    };
+
     //handledelete
     const handleDelete = async (id) => {
         try {
@@ -185,12 +278,6 @@ export const DataProvider = ({ children }) => {
             alert('Failed to delete job. Please try again.');
         }
     };
-    // Handler to update the range values
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-
-
 
     return (
         <DataContext.Provider value={({
@@ -199,8 +286,7 @@ export const DataProvider = ({ children }) => {
             handleapplicationdeadline, jobTitle, setJobTitle,
             companyName, setCompanyName,
             location, setLocation, jobType, setJobType,
-            minSalary, setMinSalary, maxSalary, setMaxSalary,
-            deadline, jobDescription, setJobDescription,
+            salary, setSalary, deadline, jobDescription, setJobDescription,
             handleSubmit, handleChangeOne, handleChangeTwo,
             handleCloseOne, handleCloseTwo, handleOpenOne, handleOpenTwo, openOne,
             openTwo,
@@ -210,9 +296,11 @@ export const DataProvider = ({ children }) => {
             handleChange, value, dummy, setDummy,
             locationOpen, handleLocationClose, handleLocationOpen,
             jobTypeOpen, handleJobTypeClose, handleJobTypeOpen, dummyTwo, setDummyTwo,
+            searchFilter, setSearchFilter, locationFilter, setLocationFilter,
 
             //JobCards 
-            datas, handleDelete
+            datas, handleDelete, handleUpdates, EditableDatas, setEditableDatas, handlingEditDatas,
+            editID, setEditID, trigger, setTrigger
 
         })}>
             {children}

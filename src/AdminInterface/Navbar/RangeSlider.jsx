@@ -20,9 +20,9 @@ export default function RangeSlider() {
                     valueLabelDisplay="off" // Show value as a tooltip above the slider
                     getAriaLabel={() => 'range'} // Accessible label for the slider
                     getAriaValueText={valuetext} // Format value label text
-                    min={50} // Minimum value of the range
-                    max={100} // Maximum value of the range
-                    step={5}
+                    min={1} // Minimum value of the range
+                    max={35} // Maximum value of the range
+                    step={0.5}
                     size="small"
                     sx={(t) => ({
                         color: "black",

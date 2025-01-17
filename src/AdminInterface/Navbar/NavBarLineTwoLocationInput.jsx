@@ -4,7 +4,7 @@ import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 import DataContext from '../DataContext';
 
 const NavBarLineTwoLocationInput = () => {
-    const { locationOpen, handleLocationClose, handleLocationOpen, dummy, setDummy } = useContext(DataContext);
+    const { locationOpen, handleLocationClose, handleLocationOpen, dummy, setDummy, locationFilter, setLocationFilter } = useContext(DataContext);
 
     return (
         <FormControl
@@ -51,8 +51,8 @@ const NavBarLineTwoLocationInput = () => {
                 open={locationOpen}
                 onClose={handleLocationClose}
                 onOpen={handleLocationOpen}
-                value={dummy || ''}
-                onChange={(e) => setDummy(e.target.value)}
+                value={locationFilter}
+                onChange={(e) => setLocationFilter(e.target.value)}
                 IconComponent={() => <InputAdornment position="end"><ArrowDropDown sx={{ display: "none" }} /></InputAdornment>}
                 sx={{
                     fontSize: "16px",
@@ -81,7 +81,7 @@ const NavBarLineTwoLocationInput = () => {
                     },
                 }}
             >
-                {["Chennai", "Coimbatore", "Bangalore"].map((city) => (
+                {["Chennai", "Coimbatore", "Bangalore", "Work From Home"].map((city) => (
                     <MenuItem
                         key={city}
                         value={city}

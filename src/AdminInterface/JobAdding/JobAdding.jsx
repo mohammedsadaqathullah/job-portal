@@ -1,7 +1,7 @@
 
 
 import { useContext } from 'react';
-import draftbtn from '../Images/draftbtn.png';
+// import draftbtn from '../Images/draftbtn.png';
 import publishbtn from '../Images/publishbtn.png';
 import DataContext from '../DataContext';
 import Heading from './Inputs/Heading';
@@ -21,6 +21,10 @@ function JobAdding() {
     return (
         <form onSubmit={(e) => handleSubmit(e)}>
             <div className="JobAddingContainer" id={jobAddingBox}>
+                <span className='closeSymbol'
+                    onClick={() => setJobAddingBox('NotShowBox')}>
+                    x
+                </span>
                 <div className='JobAddingInnerContainer'>
                     <Heading />
                     <span className='lineOne'>
@@ -39,11 +43,11 @@ function JobAdding() {
                         <JobDescriptionInput />
                     </span>
                     <span className="lineFive">
-                        <span className='draftbtnContainer'>
+                        {/* <span className='draftbtnContainer'>
                             <p className='draftbtn'
                                 onClick={() => setJobAddingBox('NotShowBox')}>
                                 Save Draft <img src={draftbtn} /> </p>
-                        </span>
+                        </span> */}
                         <span className="publishbtnContainer">
                             <button className='publishbtn'
                             >Publish <img src={publishbtn} /></button>
